@@ -8,7 +8,7 @@ class MenuItemInline(admin.TabularInline):
 
 @admin.register(Store)
 class StoreAdmin(admin.ModelAdmin):
-    list_display = ('name', 'notes',)
+    list_display = ('name', 'notes','owner')
     inlines = (MenuItemInline,)
 
 @admin.register(MenuItem)
