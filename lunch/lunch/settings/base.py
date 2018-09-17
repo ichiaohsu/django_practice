@@ -27,6 +27,7 @@ LOGIN_REDIRECT_URL = reverse_lazy('home')
 # Application definition
 
 INSTALLED_APPS = [
+    'braces',
     'events',
     'pages',
     'stores',
