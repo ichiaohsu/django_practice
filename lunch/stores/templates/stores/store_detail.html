@@ -2,7 +2,6 @@
 
 {% extends 'stores/base.html' %}
 {% load stores_tags %}
-{% load crispy_forms_tags %}
 
 {% block title %}店家列表 | {{ block.super }}{% endblock title %}
 
@@ -26,8 +25,10 @@
       <button type="submit" class="btn btn-danger">刪除</button>
       {% endif %}
     </form>
-  {# 加在 "{% endblock content %}" 前面 #}
-  {% if user.is_authenticated %}
-    {% crispy form %}
-  {% endif %}
+    {% load crispy_forms_tags %}
+   
+    {# 加在 "{% endblock content %}" 前面 #}
+    {% if user.is_authenticated %}
+    {% crispy event_form %}
+    {% endif %}
 {% endblock content %}

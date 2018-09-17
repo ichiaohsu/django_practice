@@ -19,7 +19,7 @@ def store_detail(request, pk):
         store = Store.objects.get(pk=pk)
     except Store.DoesNotExist:
         return Http404
-    event_form = EventForm(initial={'store':store}, submit_title='建立活動')
+    event_form = EventForm(initial={'store': store}, submit_title='建立活動')
     event_form.helper.form_action = reverse('event_create')
     return render(request, 'stores/store_detail.html', {'store':store, 'event_form':event_form})
 
