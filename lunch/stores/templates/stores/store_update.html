@@ -6,5 +6,10 @@
 {% block title %}更新 {{ store.name }} | {{ block.super }}{% endblock title %}
 
 {% block content %}
-{% crispy form %}
+<form metho="post">
+    {% crispy form %}
+    {% crispy menu_item_formset %}
+    <button type="submit" class="btn btn-primary">更新</button>
+</form>
+
 {% endblock content %}
