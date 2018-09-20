@@ -1,0 +1,2 @@
+export DJANGO_SETTINGS_MODULE=election_boards.settings.local
+

@@ -1,0 +1,2 @@
+unset DJANGO_SETTINGS_MODULE
+
